@@ -1,0 +1,440 @@
+/* basic reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 70px;
+    /* space for navbar */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0f172a;
+    color: white;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 40px;
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    /* merged */
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.hero h2 {
+    margin: 10px 0;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 15px 0;
+}
+
+.hero-buttons {
+    margin-top: 15px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* image */
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+    object-position: center 18%;
+    /* keep only one */
+
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    transition: 0.3s;
+}
+
+/* hover */
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+/* button */
+.btn {
+    background: #38bdf8;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* about */
+.about {
+    padding: 40px;
+    text-align: center;
+}
+
+/* skills */
+.skills {
+    padding: 60px 20px;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #1e293b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* hover effect */
+.skill:hover {
+    background: #38bdf8;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* projects */
+#projects {
+    padding: 60px 20px;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #0f172a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.progress {
+    border-left: 5px solid orange;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: orange;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* certificates */
+.certificates {
+    padding: 60px 20px;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+/* hover like skills */
+.cert-btn:hover {
+    background: #38bdf8;
+    color: black;
+    transform: scale(1.05);
+}
+
+.cert-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cert-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* make certificate button like skills */
+.cert-card a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+
+    background: #1e293b;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 20px;
+    /* same as skills */
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+/* hover same as skills */
+.cert-card a:hover {
+    background: #38bdf8;
+    color: black;
+    transform: scale(1.05);
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+}
+
+.cert-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+
+
+.badges {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f1f5f9;
+}
+
+.badge-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.badge-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.badge-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.badge-card p {
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.badge-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #0f172a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.badge-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact {
+    padding: 60px 20px;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card p {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.contact-card a {
+    color: #38bdf8;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* hover effect */
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-card i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.fa-github {
+    color: #fff;
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+}
+
+.fa-envelope {
+    color: #38bdf8;
+}
+
+.fa-code {
+    color: #facc15;
+}
+
+/* mobile view */
+@media (max-width: 768px) {
+
+    /* hero layout */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    /* image size reduce */
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* skills wrap */
+    .skill-box {
+        flex-direction: column;
+    }
+
+    /* project cards */
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* certificates */
+    .cert-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* badges */
+    .badge-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
