@@ -2,262 +2,551 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Manjunatha | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manjunatha | Java Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <h2 class="logo">Manjunatha</h2>
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <!-- Logo: M lettermark -->
+        <a href="#home" class="logo-mark" aria-label="Manjunatha home">
+            <span class="logo-letter">M</span>
+            <span class="logo-glow"></span>
+        </a>
 
         <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills" class="nav-skills-link">
+                    Skills
+                    <span class="nav-skills-dot"></span>
+                </a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certificates">Certs</a></li>
+            <li><a href="#contact" class="nav-cta">Hire Me</a></li>
         </ul>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <!-- animated particles -->
+        <div class="hero-particles" aria-hidden="true">
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+            <div class="particle p3"></div>
+            <div class="particle p4"></div>
+            <div class="particle p5"></div>
+        </div>
 
-            <!-- Image FIRST -->
-            <div class="hero-image">
-                <img src="images/profile.jpg" alt="Manjunatha">
+        <div class="hero-inner">
+            <div class="hero-photo-wrap">
+                <img src="images/profile.jpg" alt="Manjunatha" class="hero-photo" />
+                <div class="photo-ring"></div>
+                <div class="photo-ring ring2"></div>
             </div>
 
-            <!-- Text SECOND -->
-            <div class="hero-text">
-                <h1>Hi, I'm Manjunatha</h1>
-                <h2>Java Developer • DSA Learner</h2>
-
-                <p>
-                    I’m a B.Tech CSE student with a strong interest in Java and backend development.
-                    I’ve built projects using Core Java, JDBC, and MySQL, including a Student Management System.
-                    Currently, I’m working on an E-commerce web app using Servlets and improving my problem-solving
-                    skills through DSA practice on LeetCode.
+            <div class="hero-copy">
+                <span class="hero-eyebrow">B.Tech CSE · PwC Launchpad</span>
+                <h1 class="hero-title">Manjunatha</h1>
+                <h2 class="hero-sub">Java Developer &amp; <em>DSA Learner</em></h2>
+                <p class="hero-desc">
+                    B.Tech CSE Student passionate about Java, Spring Boot, and Backend Development. Building real-world
+                    applications, solving DSA problems, and continuously learning modern software engineering practices.
+                    while levelling up DSA on LeetCode.
                 </p>
-
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn">See My Work</a>
-                    <a href="resume/CV.pdf" target="_blank" class="btn">Resume</a>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">See My Work</a>
+                    <a href="resume/CV.pdf" target="_blank" class="btn btn-ghost">
+                        <i class="fa-solid fa-file-arrow-down"></i> Resume
+                    </a>
                 </div>
             </div>
+        </div>
 
+        <div class="hero-scroll-hint">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- About -->
-    <section class="about">
-        <h2>About Me</h2>
+    <!-- SKILLS TICKER -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span>Java</span><span>·</span>
+            <span>MySQL</span><span>·</span>
+            <span>JDBC</span><span>·</span>
+            <span>Spring Boot</span><span>·</span>
+            <span>Servlets</span><span>·</span>
+            <span>HTML &amp; CSS</span><span>·</span>
+            <span>JavaScript</span><span>·</span>
+            <span>DSA</span><span>·</span>
+            <span>OOP</span><span>·</span>
+            <span>AWS Basics</span><span>·</span>
+            <span>ServiceNow</span><span>·</span>
+            <span>REST APIs</span><span>·</span>
+            <span>Git &amp; GitHub</span><span>·</span>
+            <span>Java</span><span>·</span>
+            <span>MySQL</span><span>·</span>
+            <span>JDBC</span><span>·</span>
+            <span>DSA</span><span>·</span>
+            <span>OOP</span><span>·</span>
+        </div>
+    </div>
 
-        <p>
-            I’m a Java Developer with a strong foundation in Core Java, OOP concepts, and the Collection Framework.
-            I have hands-on experience with MySQL and JDBC, and have built a Student Management System with full CRUD
-            functionality and structured backend logic.
-        </p>
-
-        <p>
-            I’m actively improving my problem-solving skills by practicing Data Structures and Algorithms on platforms
-            like LeetCode and Coding Ninjas.
-            I also have working knowledge of HTML, CSS, and JavaScript for building responsive user interfaces.
-        </p>
-
-        <p>
-            Currently, I’m enhancing my industry skills through the PwC Launchpad program, and I’m passionate about
-            building real-world applications and continuously learning.
-        </p>
-
-    </section>
-
-    <!-- Skills -->
-    <section class="skills">
-        <h2>Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill">Java</div>
-            <div class="skill">MySQL</div>
-            <div class="skill">JDBC</div>
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">DSA</div>
-
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-label">About</div>
+            <div class="about-grid">
+                <div class="about-left">
+                    <h2 class="section-title">Building clean<br><em>backend logic,</em><br>one line at a time.</h2>
+                </div>
+                <div class="about-right">
+                    <p>
+                        I'm a Java Developer with a strong foundation in Core Java, OOP concepts, and the Collection
+                        Framework.
+                        I have hands-on experience with MySQL and JDBC, and built a <strong>Student Management
+                            System</strong> with full CRUD
+                        functionality and a clean DAO pattern.
+                    </p>
+                    <p>
+                        I sharpen my problem-solving daily through DSA practice on <strong>LeetCode</strong> and
+                        <strong>Coding Ninjas</strong>,
+                        and hold certifications in networking (Cisco CCNA) and cloud (AWS).
+                    </p>
+                    <p>
+                        Currently levelling up industry skills via the <strong>PwC Launchpad</strong> program, earning
+                        badges in GenAI and Modern Data Systems.
+                    </p>
+                    <p>
+                        Currently pursuing B.Tech in Computer Science and Engineering after
+                        completing a Diploma in Cloud Computing and Big Data with 94%, demonstrating consistent academic
+                        excellence.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-        <h2>Projects</h2>
+    <!-- ACADEMIC JOURNEY -->
+    <section class="education section" id="education">
+        <div class="container">
+            <div class="section-label">Education</div>
+            <h2 class="section-title">Academic <em>Journey</em></h2>
 
-        <div class="project-container">
+            <div class="timeline">
 
-            <div class="project-card">
-                <h3>Student Management System</h3>
-                <p>
-                    Console-based project using Java and JDBC with full CRUD operations.
-                    Organized using DAO, Model, and Utility classes.
-                </p>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2020 - 2021</span>
+                        <h3>SSC</h3>
+                        <p>Z.P. High School</p>
+                        <div class="timeline-score">97%</div>
+                    </div>
+                </div>
 
-                <a href="https://github.com/Manjunatha129" target="_blank">
-                    View Code
-                </a>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2021 - 2024</span>
+                        <h3>Diploma in Cloud Computing & Big Data</h3>
+                        <p>State Board of Technical Education</p>
+                        <div class="timeline-score">94%</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-year">2024 - Present</span>
+                        <h3>B.Tech Computer Science & Engineering</h3>
+                        <p>Sri Venkateswara College of Engineering</p>
+                        <div class="timeline-score">CGPA 9.0</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot future"></div>
+                    <div class="timeline-card future-card">
+                        <span class="timeline-year">Next Goal</span>
+                        <h3>Software Engineer</h3>
+                        <p>Building impactful products and scalable backend systems.</p>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="project-card progress">
-                <h3>E-Commerce Ordering System</h3>
-                <p>
-                    Currently building using Java Servlets and MySQL.
-                    Working on order processing, backend logic, and database integration.
-                </p>
-
-                <span class="status">Currently Working On</span>
-            </div>
-
         </div>
     </section>
 
-    <!-- Certificates -->
-    <section id="certificates" class="certificates">
-        <h2>Certificates</h2>
+    <!-- =============================================
+     REPLACE your entire skills-section with this
+============================================= -->
 
-        <div class="cert-container">
+    <section class="skills-section section" id="skills">
+        <div class="container">
+            <div class="section-label">Expertise</div>
+            <h2 class="section-title">Skills &amp; <em>Technologies</em></h2>
 
-            <div class="cert-card">
-                <h3>ServiceNow Virtual Internship</h3>
-                <small>ServiceNow</small>
-                <p>
-                    Completed a virtual internship focused on IT service management,
-                    workflows, and platform fundamentals.
-                </p>
-                <a href="certificates/servicenow-certificate.pdf" target="_blank">
-                    View Certificate
-                </a>
-            </div>
-            <!-- Coding Ninjas certificate-->
-            <div class="cert-card">
-                <h3>Data Structures & Algorithms (Coding Ninjas)</h3>
-                <small>Coding Ninjas</small>
-                <p>
-                    Learned core Data Structures and Algorithms including arrays,
-                    linked lists, stacks, queues, trees, and problem-solving techniques.
-                </p>
-                <a href="certificates/coding-ninjas-certificate.pdf" target="_blank">
-                    View Certificate
-                </a>
-            </div>
-            <!-- Cisco netacadamy certificate-->
-            <div class="cert-card">
-                <h3>CCNA: Introduction to Networks (Cisco)</h3>
-                <small>Cisco Networking Academy</small>
-                <p>
-                    Awarded for successfully completing CCNA: Introduction to Networks
-                    through Cisco Networking Academy at Sri Venkateswara College of Engineering.
-                </p>
-                <a href="certificates/cisco-ccna.pdf" target="_blank">
-                    View Certificate
-                </a>
-            </div>
+            <div class="skills-groups">
 
-            <div class="cert-card">
-                <h3>DSA with Java - Coding Ninjas</h3>
-                <small>Coding Ninjas</small>
-                <p>
-                    Strengthened problem-solving skills using Java, focusing on
-                    algorithmic thinking and efficient coding practices.
-                </p>
-                <a href="certificates/coding-ninjas-dsa-java.pdf" target="_blank">
-                    View Certificate
-                </a>
-            </div>
+                <!-- Languages -->
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Languages</h4>
+                    <div class="skill-badges">
+                        <div class="skill-badge java">
+                            <i class="fa-brands fa-java"></i><span>Java</span>
+                        </div>
+                        <div class="skill-badge js">
+                            <i class="fa-brands fa-js"></i><span>js</span>
+                        </div>
+                        <div class="skill-badge sql">
+                            <i class="fa-solid fa-database"></i><span>SQL</span>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="cert-card">
-                <h3>AWS Cloud Computing (APSSDC)</h3>
-                <small>APSSDC</small>
-                <p>
-                    Gained foundational knowledge in cloud computing, including AWS services,
-                    deployment models, and basic cloud architecture concepts.
-                </p>
-                <a href="certificates/aws-certificate.pdf" target="_blank">
-                    View Certificate
-                </a>
-            </div>
+                <!-- Frontend -->
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Frontend</h4>
+                    <div class="skill-badges">
+                        <div class="skill-badge html">
+                            <i class="fa-brands fa-html5"></i><span>HTML</span>
+                        </div>
+                        <div class="skill-badge css">
+                            <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
+                        </div>
+                        <div class="skill-badge js">
+                            <i class="fa-brands fa-js"></i><span>JS(intermediate)</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Database -->
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Database</h4>
+                    <div class="skill-badges">
+                        <div class="skill-badge mysql">
+                            <i class="fa-solid fa-database"></i><span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Backend</h4>
+                    <div class="skill-badges">
+                        <div class="skill-badge java">
+                            <i class="fa-brands fa-java"></i><span>Core Java</span>
+                        </div>
+                        <div class="skill-badge jdbc">
+                            <i class="fa-solid fa-plug"></i><span>JDBC(Basics)</span>
+                        </div>
+                        <div class="skill-badge spring">
+                            <i class="fa-solid fa-leaf"></i><span>Spring Boot(Learning/Building)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Concepts -->
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Core Concepts</h4>
+                    <div class="skill-badges">
+                        <div class="skill-badge concept">
+                            <i class="fa-solid fa-cubes"></i><span>Object-Oriented Programming (OOP)</span>
+                        </div>
+                        <div class="skill-badge concept">
+                            <i class="fa-solid fa-sitemap"></i><span>DSA</span>
+                        </div>
+                        <div class="skill-badge concept">
+                            <i class="fa-solid fa-table-columns"></i><span>DBMS</span>
+                        </div>
+                        <div class="skill-badge concept">
+                            <i class="fa-solid fa-network-wired"></i><span>Computer Networks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-group">
+                    <h4 class="skill-group-title">Tools &amp; Platforms</h4>
+                    <div class="skill-badges">
+                        <div class="skill-badge git">
+                            <i class="fa-brands fa-git-alt"></i><span>Git</span>
+                        </div>
+                        <div class="skill-badge github">
+                            <i class="fa-brands fa-github"></i><span>GitHub</span>
+                        </div>
+                        <div class="skill-badge tool">
+                            <i class="fa-solid fa-flask"></i><span>Postman</span>
+                        </div>
+                        <div class="skill-badge tool">
+                            <i class="fa-solid fa-code"></i><span>IntelliJ IDEA</span>
+                        </div>
+                        <div class="skill-badge tool">
+                            <i class="fa-solid fa-laptop-code"></i><span>VS Code</span>
+                        </div>
+                        <div class="skill-badge tool">
+                            <i class="fa-solid fa-server"></i><span>Apache Tomcat</span>
+                        </div>
+                        <div class="skill-badge aws">
+                            <i class="fa-brands fa-aws"></i><span>AWS Basics</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <section class="badges">
-        <h2>Achievements</h2>
 
-        <div class="badge-container">
 
-            <!-- GenAI Badge -->
-            <div class="badge-card">
-                <img src="images/genai.png" alt="GenAI Badge">
-                <p>GenAI - Prompt Engineering</p>
-                <a href="https://pwc.tekstac.com/blocks/tekbadges/badge_list.php?id=1088" target="_blank">Verify</a>
+
+    </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="section-label">Projects</div>
+            <h2 class="section-title">What I've built</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project 1: Student Management System -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-tag done">Completed</span>
+                        <a href="https://github.com/Manjunatha129" target="_blank" class="project-link-icon"
+                            aria-label="View on GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                    <h3>Student Management System</h3>
+                    <p>
+                        Console-based Java application with full CRUD operations. Structured using
+                        DAO, Model, and Utility layers — clean separation of concerns, backed by MySQL via JDBC.
+                    </p>
+                    <div class="project-stack">
+                        <span>Java</span><span>JDBC</span><span>MySQL</span>
+                    </div>
+                    <a href="https://github.com/Manjunatha129" target="_blank" class="btn btn-small">View Code →</a>
+                </div>
+
+                <!-- Project 2: E-Commerce -->
+                <div class="project-card project-wip">
+                    <div class="project-top">
+                        <span class="project-tag wip">In Progress</span>
+                    </div>
+                    <h3>E-Commerce Ordering System</h3>
+                    <p>
+                        Web app built with Java Servlets and MySQL. Working on order processing,
+                        backend business logic, and database integration with a clean MVC structure.
+                    </p>
+                    <div class="project-stack">
+                        <span>Java Servlets</span><span>MySQL</span><span>HTML/CSS</span>
+                    </div>
+                    <span class="wip-note"><i class="fa-solid fa-circle-dot fa-beat"></i> Active development</span>
+                </div>
+
+                <!-- Project 3: AI Portfolio Assistant — FEATURED -->
+                <div class="project-card project-ai project-wip">
+                    <div class="project-top">
+                        <span class="project-tag ai-tag">🤖 AI · Ongoing</span>
+                        <a href="https://github.com/Manjunatha129" target="_blank" class="project-link-icon"
+                            aria-label="View on GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                    <h3>AI Portfolio Assistant</h3>
+                    <p>
+                        An intelligent chat-based app that guides students, freshers, and developers to build
+                        professional portfolio websites — no design skills needed. Collects personal details,
+                        skills, projects, education, and contact info through conversation. Supports profile photo
+                        upload, resume upload, live portfolio preview, and PDF download. Currently integrating
+                        AI-powered content generation, resume data extraction, and automated portfolio customisation.
+                    </p>
+                    <div class="project-stack">
+                        <span>Java</span><span>Spring Boot</span><span>HTML</span><span>CSS</span>
+                        <span>JavaScript</span><span>REST APIs</span><span>Git</span><span>GitHub</span>
+                    </div>
+                    <div class="ai-features">
+                        <span><i class="fa-solid fa-check"></i> Chat-based UI</span>
+                        <span><i class="fa-solid fa-check"></i> Resume Upload</span>
+                        <span><i class="fa-solid fa-check"></i> PDF Export</span>
+                        <span><i class="fa-solid fa-rotate fa-spin"></i> AI Content Gen</span>
+                    </div>
+                    <span class="wip-note"><i class="fa-solid fa-circle-dot fa-beat"></i> Currently developing</span>
+                </div>
+
             </div>
-
-            <!-- Data Systems Badge -->
-            <div class="badge-card">
-                <img src="images/data_system.png" alt="Data Systems Badge">
-                <p>Modern Data Systems</p>
-                <a href="https://pwc.tekstac.com/blocks/tekbadges/badge_list.php?id=1088" target="_blank">Verify</a>
-            </div>
-
-
-
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
+    <!-- CERTIFICATES -->
+    <section class="certificates section" id="certificates">
+        <div class="container">
+            <div class="section-label light">Certificates</div>
+            <h2 class="section-title light">Credentials &amp; Learning</h2>
 
-        <div class="contact-container">
+            <div class="cert-grid">
 
-            <!-- Email -->
-            <div class="contact-card">
-                <i class="fa-solid fa-envelope"></i>
-                <h3>Email</h3>
-                <a href="mailto:manjunathaofficial1425@gmail.com">
-                    Send Mail
-                </a>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-server"></i></div>
+                    <div class="cert-body">
+                        <small>ServiceNow</small>
+                        <h3>Virtual Internship</h3>
+                        <p>IT service management, workflows, and platform fundamentals.</p>
+                    </div>
+                    <a href="certificates/servicenow-certificate.pdf" target="_blank" class="cert-btn">View <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                    <div class="cert-body">
+                        <small>Coding Ninjas</small>
+                        <h3>Data Structures &amp; Algorithms</h3>
+                        <p>Arrays, linked lists, stacks, queues, trees, and core problem-solving techniques.</p>
+                    </div>
+                    <a href="certificates/coding-ninjas-certificate.pdf" target="_blank" class="cert-btn">View <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <div class="cert-body">
+                        <small>Cisco Networking Academy</small>
+                        <h3>CCNA: Intro to Networks</h3>
+                        <p>Completed at Sri Venkateswara College of Engineering.</p>
+                    </div>
+                    <a href="certificates/cisco-ccna.pdf" target="_blank" class="cert-btn">View <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-brands fa-java"></i></div>
+                    <div class="cert-body">
+                        <small>Coding Ninjas</small>
+                        <h3>DSA with Java</h3>
+                        <p>Algorithmic thinking and efficient coding in Java.</p>
+                    </div>
+                    <a href="certificates/coding-ninjas-dsa-java.pdf" target="_blank" class="cert-btn">View <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+                    <div class="cert-body">
+                        <small>APSSDC</small>
+                        <h3>AWS Cloud Computing</h3>
+                        <p>AWS services, deployment models, and basic cloud architecture.</p>
+                    </div>
+                    <a href="certificates/aws-certificate.pdf" target="_blank" class="cert-btn">View <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+
             </div>
-
-            <!-- GitHub -->
-            <div class="contact-card">
-                <i class="fa-brands fa-github"></i>
-                <h3>GitHub</h3>
-                <a href="https://github.com/Manjunatha129" target="_blank">
-                    View Profile
-                </a>
-            </div>
-
-            <!-- LinkedIn -->
-            <div class="contact-card">
-                <i class="fa-brands fa-linkedin"></i>
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/mr-manjunatha" target="_blank">
-                    View Profile
-                </a>
-            </div>
-
-            <!-- LeetCode -->
-            <div class="contact-card">
-                <i class="fa-solid fa-code"></i>
-                <h3>LeetCode</h3>
-                <a href="https://leetcode.com/YOUR_USERNAME" target="_blank">
-                    View Profile
-                </a>
-            </div>
-
         </div>
     </section>
+
+    <!-- BADGES / ACHIEVEMENTS -->
+    <section class="badges section" id="badges">
+        <div class="container">
+            <div class="section-label">Achievements</div>
+            <h2 class="section-title">PwC Launchpad Badges</h2>
+
+            <div class="badges-grid">
+                <div class="badge-card">
+                    <img src="images/genai.png" alt="GenAI Badge" />
+                    <div class="badge-info">
+                        <h3>GenAI – Prompt Engineering</h3>
+                        <a href="https://pwc.tekstac.com/blocks/tekbadges/badge_list.php?id=1088" target="_blank"
+                            class="btn btn-small">Verify →</a>
+                    </div>
+                </div>
+                <div class="badge-card">
+                    <img src="images/data_system.png" alt="Data Systems Badge" />
+                    <div class="badge-info">
+                        <h3>Modern Data Systems</h3>
+                        <a href="https://pwc.tekstac.com/blocks/tekbadges/badge_list.php?id=1088" target="_blank"
+                            class="btn btn-small">Verify →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact-inner">
+                <div class="contact-copy">
+                    <div class="section-label light">Contact</div>
+                    <h2 class="section-title light">Let's work<br><em>together.</em></h2>
+                    <p class="contact-desc">
+                        Open to internships, collaborations, and backend projects.
+                        Drop a message or connect through any platform ->.
+                    </p>
+                    <a href="mailto:manjunathaofficial1425@gmail.com" class="btn btn-primary">
+                        <i class="fa-solid fa-envelope"></i> Send a Mail
+                    </a>
+                </div>
+
+                <div class="contact-links">
+                    <a href="https://github.com/Manjunatha129" target="_blank" class="contact-link">
+                        <i class="fa-brands fa-github"></i>
+                        <span>
+                            <strong>GitHub</strong>
+                            <small>Manjunatha129</small>
+                        </span>
+                        <i class="fa-solid fa-arrow-right arrow"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mr-manjunatha" target="_blank" class="contact-link">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>
+                            <strong>LinkedIn</strong>
+                            <small>mr-manjunatha</small>
+                        </span>
+                        <i class="fa-solid fa-arrow-right arrow"></i>
+                    </a>
+                    <a href="https://leetcode.com/u/MrCoderr/" target="_blank" class="contact-link">
+                        <i class="fa-solid fa-code"></i>
+                        <span>
+                            <strong>LeetCode</strong>
+                            <small>Practice profile</small>
+                        </span>
+                        <i class="fa-solid fa-arrow-right arrow"></i>
+                    </a>
+                    <a href="mailto:manjunathaofficial1425@gmail.com" class="contact-link">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>
+                            <strong>Email</strong>
+                            <small>manjunathaofficial1425@gmail.com</small>
+                        </span>
+                        <i class="fa-solid fa-arrow-right arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Designed &amp; built by <strong>Manjunatha</strong></p>
+    </footer>
+
     <script src="script.js"></script>
-
 </body>
 
 </html>
